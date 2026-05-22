@@ -1,0 +1,44 @@
+[project]
+name = "feishu-app-codex-bridge"
+version = "0.1.0"
+description = "Local-first, file-backed Feishu/Lark app to Codex bridge for auditable enterprise agent workflows."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "feishu-app-codex-bridge contributors" }
+]
+keywords = [
+  "feishu",
+  "lark",
+  "codex",
+  "agent",
+  "bridge",
+  "chatops",
+  "local-first",
+  "audit"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Communications :: Chat",
+  "Topic :: Software Development"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/your-org/feishu-app-codex-bridge"
+Documentation = "https://github.com/your-org/feishu-app-codex-bridge/tree/main/docs"
+Issues = "https://github.com/your-org/feishu-app-codex-bridge/issues"
+
+[project.scripts]
+feishu-app-codex-bridge = "bin.feishu_app_codex_bridge:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+

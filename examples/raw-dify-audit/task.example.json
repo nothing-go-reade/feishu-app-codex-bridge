@@ -1,0 +1,6 @@
+{
+  "taskId": "demo-task-001",
+  "callbackUrl": "http://127.0.0.1:8080/example/raw-dify/callback",
+  "prompt": "Return only JSON. Produce a safe SQL replacement for demo_raw.orders -> demo_dm.order_detail, or return an empty result with analysis if unsafe.",
+  "source": "FEISHU_APP_CODEX_BRIDGE"
+}

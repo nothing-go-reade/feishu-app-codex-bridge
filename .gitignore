@@ -1,0 +1,35 @@
+# Runtime data
+/var/*
+/logs/*.ndjson
+/inbox/*.ndjson
+/state/*.json
+
+# Keep directory placeholders
+!/var/.gitkeep
+!/logs/.gitkeep
+!/inbox/.gitkeep
+!/state/.gitkeep
+
+# Local config and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
