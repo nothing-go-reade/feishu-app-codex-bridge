@@ -2,9 +2,11 @@
 
 ## Default Policy
 
-Callbacks are disabled by default.
+Raw Dify audit callbacks are disabled by default. AI semantic tasks use the
+callback URL supplied in the task payload so generated results can return to
+the business system.
 
-The bridge can run safely as:
+Without the raw Dify callback switch, the bridge can run safely as:
 
 ```text
 Feishu/Lark -> Codex -> local files -> Feishu/Lark
@@ -15,13 +17,13 @@ No business HTTP request is sent unless explicitly enabled.
 ## Enable Callback
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py start --enable-callback
+python3 bin/feishu_codex_bridge.py start --enable-raw-dify-audit-callback
 ```
 
 or:
 
 ```bash
-FEISHU_APP_CODEX_ENABLE_CALLBACK=true python3 bin/feishu_app_codex_bridge.py start
+ENABLE_RAW_DIFY_AUDIT_CALLBACK=true python3 bin/feishu_codex_bridge.py start
 ```
 
 ## Callback Contract
@@ -86,7 +88,8 @@ The receiving business system should still validate:
 Callback attempts are appended to:
 
 ```text
-inbox/callback-results.ndjson
+inbox/ai-semantic-results.ndjson
+inbox/raw-dify-audit-results.ndjson
 ```
 
 Typical records:
@@ -102,4 +105,3 @@ Typical records:
 ```json
 {"status":"failed","error":"Connection refused"}
 ```
-

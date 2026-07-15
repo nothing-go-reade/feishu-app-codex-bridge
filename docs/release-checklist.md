@@ -4,11 +4,11 @@ Use this checklist before publishing the repository.
 
 ## Repository Hygiene
 
-- [ ] `python3 -m py_compile bin/feishu_app_codex_bridge.py tests/test_sanitization.py`
+- [ ] `python3 -m py_compile bin/feishu_codex_bridge.py tests/test_sanitization.py`
 - [ ] `python3 tests/test_sanitization.py`
 - [ ] Optional local private-token scan:
   `PRIVATE_TOKEN_PATTERNS='token1,token2,internal-prefix' python3 tests/test_sanitization.py`
-- [ ] `python3 bin/feishu_app_codex_bridge.py --help`
+- [ ] `python3 bin/feishu_codex_bridge.py --help`
 - [ ] No runtime NDJSON files are committed.
 - [ ] No SQLite database files are committed.
 - [ ] No pid or log files are committed.
@@ -34,7 +34,7 @@ Use this checklist before publishing the repository.
 
 ## GitHub Metadata
 
-- [ ] Replace placeholder URLs in `pyproject.toml`.
+- [ ] Repository URLs in `pyproject.toml` point to `nothing-go-reade/feishu-app-codex-bridge`.
 - [ ] Add repository description:
   `Local-first, file-backed Feishu/Lark to Codex bridge for auditable enterprise agent workflows.`
 - [ ] Add topics:

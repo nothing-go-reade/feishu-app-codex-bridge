@@ -31,14 +31,13 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/your-org/feishu-app-codex-bridge"
-Documentation = "https://github.com/your-org/feishu-app-codex-bridge/tree/main/docs"
-Issues = "https://github.com/your-org/feishu-app-codex-bridge/issues"
+Homepage = "https://github.com/nothing-go-reade/feishu-app-codex-bridge"
+Documentation = "https://github.com/nothing-go-reade/feishu-app-codex-bridge/tree/main/docs"
+Issues = "https://github.com/nothing-go-reade/feishu-app-codex-bridge/issues"
 
 [project.scripts]
-feishu-app-codex-bridge = "bin.feishu_app_codex_bridge:main"
+feishu-app-codex-bridge = "bin.feishu_codex_bridge:main"
 
 [tool.ruff]
 line-length = 120
 target-version = "py39"
-

@@ -78,7 +78,7 @@ If the message is no longer editable, the bridge sends the final output as a new
 ### Foreground
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py run
+python3 bin/feishu_codex_bridge.py run
 ```
 
 Useful for development and debugging.
@@ -86,7 +86,7 @@ Useful for development and debugging.
 ### Background
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py start
+python3 bin/feishu_codex_bridge.py start
 ```
 
 Writes a pid file to `var/bridge.pid` and logs to `var/bridge.log`.
@@ -94,7 +94,7 @@ Writes a pid file to `var/bridge.pid` and logs to `var/bridge.log`.
 ### Watch
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py watch --interval 30
+python3 bin/feishu_codex_bridge.py watch --interval 30
 ```
 
 Checks the pid file and `lark-cli event status`. If unhealthy, it can restart the bridge.

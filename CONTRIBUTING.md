@@ -16,9 +16,9 @@ This project is designed for local-private enterprise agent workflows. Please ke
 ## Local Checks
 
 ```bash
-python3 -m py_compile bin/feishu_app_codex_bridge.py
+python3 -m py_compile bin/feishu_codex_bridge.py bin/ai_semantic_http_bridge.py bin/raw_dify_audit_http_bridge.py
 python3 tests/test_sanitization.py
-python3 bin/feishu_app_codex_bridge.py init
+python3 bin/feishu_codex_bridge.py --help
 ```
 
 ## Pull Request Checklist
@@ -28,4 +28,3 @@ python3 bin/feishu_app_codex_bridge.py init
 - [ ] Documentation is updated.
 - [ ] Callback behavior remains disabled by default.
 - [ ] New file formats are documented in `docs/file-protocol.md`.
-

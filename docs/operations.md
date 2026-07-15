@@ -3,25 +3,25 @@
 ## Start
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py start
+python3 bin/feishu_codex_bridge.py start
 ```
 
 ## Stop
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py stop
+python3 bin/feishu_codex_bridge.py stop
 ```
 
 ## Status
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py status
+python3 bin/feishu_codex_bridge.py status
 ```
 
 ## Healthcheck
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py healthcheck --format json
+python3 bin/feishu_codex_bridge.py healthcheck --format json
 ```
 
 Healthy means:
@@ -34,7 +34,7 @@ Healthy means:
 ## Watch
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py watch --interval 30
+python3 bin/feishu_codex_bridge.py watch --interval 30
 ```
 
 The watch loop can restart the bridge when unhealthy.
@@ -55,10 +55,10 @@ logs/watch.ndjson
 Runtime files are intentionally ignored by Git. To reset a local dev environment:
 
 ```bash
-python3 bin/feishu_app_codex_bridge.py stop
+python3 bin/feishu_codex_bridge.py stop
 rm -f var/bridge.sqlite3 var/bridge.sqlite3-* var/bridge.pid var/bridge.log
 rm -f inbox/*.ndjson logs/*.ndjson state/session-map.json
-python3 bin/feishu_app_codex_bridge.py init
+python3 bin/feishu_codex_bridge.py init
 ```
 
 Do not run this cleanup on a directory that contains audit records you need to keep.
